@@ -1,4 +1,4 @@
-FROM ruby:2.3
+FROM ruby:2.3-slim
 
 RUN	apt-get update && \
 	DEBIAN_FRONTEND=noninteractive && \
