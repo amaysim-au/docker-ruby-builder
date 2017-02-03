@@ -9,6 +9,7 @@ ruby builder with extra dependencies to run Webdriver and DB tests:
 - make
 - tzdata 
 - firefox 51.0
+- geckodriver 0.14.0
 
 ## Usage
 
