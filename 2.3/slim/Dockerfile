@@ -1,7 +1,8 @@
 FROM ruby:2.3-slim
 
-RUN	apt-get update && \
-	DEBIAN_FRONTEND=noninteractive && \
-    apt-get -y install nodejs postgresql-client iceweasel xvfb 
+# install build deps
+RUN	echo "deb http://mozilla.debian.net/ jessie-backports firefox-release" >> /etc/apt/sources.list && \
+    apt-get update && \
+    apt-get -y --force-yes -t jessie-backports install nodejs postgresql-client xvfb make firefox
 
 CMD [ "ruby", "-v" ]

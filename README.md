@@ -1,9 +1,14 @@
 # docker-ruby-builder
-ruby builder with:
+ruby builder with extra dependencies to run Webdriver and DB tests:
 
 - nodejs
-- gecko driver
+- git
 - xvfb
-- iceweasel (debian firefox)
-- [xvfb-firefox](https://github.com/mipmip/docker-watir-xvfb/blob/master/xvfb-firefox)
-- postgresql-client - for running DB tests
+- postgresql-client
+- make
+- firefox 51.0
+
+## Usage
+
+    docker run amaysim/ruby-builder:2.3-slim bundle exec rake db:test:prepare
+    docker run amaysim/ruby-builder:2.3-slim bundle exec rake
