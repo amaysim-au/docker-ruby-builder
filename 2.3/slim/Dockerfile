@@ -6,7 +6,7 @@ ENV GECKO_VERSION 0.15.0
 RUN	echo "deb http://mozilla.debian.net/ jessie-backports firefox-esr" >> /etc/apt/sources.list && \
     apt-get update && \
     apt-get -y --force-yes -t jessie-backports install build-essential  \
-    libpq-dev postgresql-client nodejs xvfb tzdata make git wget && \
+    libpq-dev postgresql-client nodejs xvfb tzdata make git wget firefox-esr && \
     echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 
 # install gecko driver
