@@ -7,11 +7,11 @@ ruby builder with extra dependencies to run Webdriver and DB tests:
 - xvfb
 - postgresql dev and client
 - make
-- tzdata 
+- tzdata
 - firefox 51.0
-- geckodriver 0.14.0
+- geckodriver 0.15.0
 
 ## Usage
 
-    docker run amaysim/ruby-builder:2.3-slim bundle exec rake db:test:prepare
-    docker run amaysim/ruby-builder:2.3-slim bundle exec rake
+    docker run amaysim/ruby-builder:2.5-slim bundle exec rake db:test:prepare
+    docker run amaysim/ruby-builder:2.5-slim bundle exec rake
